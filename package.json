@@ -21,6 +21,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "14.17.4"
+  },
   "bugs": {
     "url": "https://github.com/Denz1423/Toothbrushes_SEPER/issues"
   },
