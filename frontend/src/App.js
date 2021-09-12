@@ -25,7 +25,7 @@ const App = () =>  {
             <Route  path="/SEPractice" component={SEPractice}/>
             <Route  path="/SubmitArticle" component={SubmitArticle}/>
             <Route exact path="/404" component={NotFoundPage}/>
-            <Redirect to="/404" />
+            <Redirect to="/" />
           </div>
         </div>
         </Router>
