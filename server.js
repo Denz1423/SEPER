@@ -4,6 +4,8 @@ const connectDB = require("./db");
 const cors = require("cors");
 const path = require('path');
 const bodyParser = require("body-parser");
+const articles = require("./routers/articles")
+const practices = require("./routers/practices");
 
 
 const app = express();
@@ -17,6 +19,15 @@ connectDB();
 app.listen(port, () => {
     console.log(`Server is running on ${port}`);
 }); 
+
+app.post('/articles', articles.createOne);
+
+app.get('/articles', articles.getAll);
+
+app.get('/articles/:sepractice', articles.getPractices);
+
+app.get('/practices', practices.getAll);
+
 
 if(process.env.NODE_ENV === "production"){
     app.use(express.static(path.join(__dirname, '/frontend/build')));
