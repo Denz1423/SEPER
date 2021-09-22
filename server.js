@@ -20,8 +20,6 @@ app.listen(port, () => {
     console.log(`Server is running on ${port}`);
 }); 
 
-app.post('/articles', articles.createOne);
-
 app.get('/articles', articles.getAll);
 
 app.get('/articles/:sepractice', articles.getPractices);
