@@ -13,9 +13,7 @@ const SEPractice = () => {
     if (p === "") {
       setArticles1([]);
     } else {
-      axios
-        .get(`http://localhost:8080/articles/${p}`)
-        .then(function (response) {
+      axios.get(`/articles/${p}`).then(function (response) {
           setArticles1(response.data);
         });
     }
