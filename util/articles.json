@@ -7,7 +7,7 @@
     "pubyear": "2014",
     "doi": "https://doi.org/10.1145/2601248.2601267",
     "claim": "Code Quality Improvement",
-    "EvidenceLevel": "Strong support",
+    "evidence": "Strong support",
     "sepractice": "TDD"
   },
   {
@@ -18,7 +18,7 @@
     "pubyear": "2014",
     "doi": "https://doi.org/10.1145/2601248.2601267",
     "claim": "Product Quality Improvement",
-    "EvidenceLevel": "Weak support",
+    "evidence": "Weak support",
     "sepractice": "TDD"
   },
   {
@@ -29,7 +29,7 @@
     "pubyear": "2008",
     "doi": "https://doi.org/10.1007/s10664-008-9062-z",
     "claim": "Product Quality Improvement",
-    "EvidenceLevel": "Weak support",
+    "evidence": "Weak support",
     "sepractice": "TDD"
   },
   {
@@ -40,7 +40,7 @@
     "pubyear": "2008",
     "doi": "",
     "claim": "Code Quality Improvement",
-    "EvidenceLevel": "Strong support",
+    "evidence": "Strong support",
     "sepractice": "TDD"
   },
   {
@@ -51,7 +51,7 @@
     "pubyear": "2017",
     "doi": "https://doi.org/10.1109/esem.2007.35",
     "claim": "Code Quality Improvement",
-    "EvidenceLevel": "Weak support",
+    "evidence": "Weak support",
     "sepractice": "TDD"
   },
   {
@@ -62,7 +62,7 @@
     "pubyear": "2012",
     "doi": "https://doi.org/10.1109/apsec.2011.44",
     "claim": "Team Satisfaction Improvement",
-    "EvidenceLevel": "Weak support",
+    "evidence": "Weak support",
     "sepractice": "TDD"
   },
   {
@@ -73,7 +73,7 @@
     "pubyear": "2012",
     "doi": "https://doi.org/10.1109/apsec.2011.44",
     "claim": "Product Quality Improvement",
-    "EvidenceLevel": "Weak support",
+    "evidence": "Weak support",
     "sepractice": "TDD"
   },
   {
@@ -84,7 +84,7 @@
     "pubyear": "2006",
     "doi": "https://doi.org/10.1109/ms.2006.157",
     "claim": "Code Quality Improvement",
-    "EvidenceLevel": "Strong support",
+    "evidence": "Strong support",
     "sepractice": "TDD"
   },
   {
@@ -95,7 +95,7 @@
     "pubyear": "2018",
     "doi": "https://doi.org/10.1145/3202710.3203153",
     "claim": "Product Quality Improvement",
-    "EvidenceLevel": "Weak support",
+    "evidence": "Weak support",
     "sepractice": "TDD"
   },
   {
@@ -106,7 +106,7 @@
     "pubyear": "2018",
     "doi": "https://doi.org/10.1145/3202710.3203153",
     "claim": "Code Quality Improvement",
-    "EvidenceLevel": "Weak support",
+    "evidence": "Weak support",
     "sepractice": "TDD"
   },
   {
@@ -117,7 +117,7 @@
     "pubyear": "2001",
     "doi": "https://doi.org/10.1109/issre.2003.1251029",
     "claim": "Product Quality Improvement",
-    "EvidenceLevel": "Strong support",
+    "evidence": "Strong support",
     "sepractice": "TDD"
   },
   {
@@ -128,7 +128,7 @@
     "pubyear": "2019",
     "doi": "https://doi.org/10.1007/978-3-030-36701-5_2",
     "claim": "Code Quality Improvement",
-    "EvidenceLevel": "Weak support",
+    "evidence": "Weak support",
     "sepractice": "TDD"
   }
 ]

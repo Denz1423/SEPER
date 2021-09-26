@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const articleSchema = new mongoose.Schema({
-    
+    //
     _id: mongoose.Schema.Types.ObjectId,
     title: String,
     authors: String,
@@ -9,7 +9,7 @@ const articleSchema = new mongoose.Schema({
     pubyear: Number,
     doi: String,
     claim: String,
-    EvidenceLevel: String,
+    evidence: String,
     sepractice: String
 });
 
