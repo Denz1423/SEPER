@@ -26,6 +26,8 @@ app.get('/articles/:sepractice', articles.getPractices);
 
 app.get('/practices', practices.getAll);
 
+app.post('/articles', articles.createOne);
+
 
 if(process.env.NODE_ENV === "production"){
     app.use(express.static(path.join(__dirname, '/frontend/build')));
