@@ -6,7 +6,6 @@ const SubmissionForm = () => {
   const [result, setResult] = useState("");
   const onSubmit = (data) => {
     const axios = require('axios');
-    console.log(data);
     axios.post('/articles', JSON.stringify(data), {headers: {"Content-Type": "application/json"}}).then(function(response){
       setResult("Submission success!");
     });
