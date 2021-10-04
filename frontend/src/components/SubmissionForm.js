@@ -4,7 +4,13 @@ import { useForm } from "react-hook-form";
 const SubmissionForm = () => {
   const { register, handleSubmit } = useForm();
   const [result, setResult] = useState("");
-  const onSubmit = (data) => setResult(JSON.stringify(data));
+  const onSubmit = (data) => {
+    const axios = require('axios');
+    console.log(data);
+    axios.post('/articles', JSON.stringify(data), {headers: {"Content-Type": "application/json"}}).then(function(response){
+      setResult("Submission success!");
+    });
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -18,7 +24,7 @@ const SubmissionForm = () => {
       <select {...register("sepractice")}>
         <option value="">Select SE practice...</option>
         <option value="TDD">TDD</option>
-        <option value="Mob Programming">Mob Programmin</option>
+        <option value="Mob Programming">Mob Programming</option>
       </select>
 
       <p>{result}</p>
