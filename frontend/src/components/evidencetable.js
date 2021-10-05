@@ -109,8 +109,8 @@ const {
             setPageSize(Number(e.target.value))
           }}
         >
-          {[3, 7, 15].map(pageSize => (
-            <option key={pageSize} value={pageSize}>
+          {["All", 3, 7, 15].map(pageSize => (
+            <option key={pageSize} value={pageSize === "All" ? data.length : pageSize}>
               Show {pageSize}
             </option>
           ))}

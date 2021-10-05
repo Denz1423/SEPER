@@ -4,8 +4,8 @@ const connectDB = require("./db");
 const cors = require("cors");
 const path = require('path');
 const bodyParser = require("body-parser");
-const articles = require("./routers/articles")
-const practices = require("./routers/practices");
+const articles = require("./controllers/articlesController");
+const practices = require("./controllers/practices");
 
 
 const app = express();
@@ -24,7 +24,7 @@ app.get('/articles', articles.getAll);
 
 app.get('/articles/:sepractice', articles.getPractices);
 
-app.get('/practices', practices.getAll);
+app.post('/articles', articles.createOne);
 
 
 if(process.env.NODE_ENV === "production"){
@@ -38,6 +38,8 @@ if(process.env.NODE_ENV === "production"){
         res.send("Api running");
     });
 }
+
+module.exports = app;
 
 
 
