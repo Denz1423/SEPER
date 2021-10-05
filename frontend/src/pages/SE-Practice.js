@@ -14,6 +14,7 @@ const SEPractice = () => {
       setArticles1([]);
     } else {
       axios.get(`/articles/${p}`).then(function (response) {
+          console.log(p);
           setArticles1(response.data);
         });
     }

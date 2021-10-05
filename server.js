@@ -24,8 +24,6 @@ app.get('/articles', articles.getAll);
 
 app.get('/articles/:sepractice', articles.getPractices);
 
-app.get('/practices', practices.getAll);
-
 app.post('/articles', articles.createOne);
 
 
@@ -40,6 +38,8 @@ if(process.env.NODE_ENV === "production"){
         res.send("Api running");
     });
 }
+
+module.exports = app;
 
 
 
