@@ -16,6 +16,8 @@ jobs:
   build:
   
     runs-on: ubuntu-latest
+    env:
+      MONGO_URI: ${{secrets.MONGO_URI}}
 
     strategy:
       matrix:
@@ -35,14 +37,6 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-      
-      - name: Setup mongodb with password
-        uses: getong/mongo-action@v1.1
-        with:
-          mongo version: latest
-          host port: 27017
-          mongo username: ${{secrets.MONGO_USERNAME}}
-          mongo password: ${{secrets.MONGO_PASSWORD}}
 
       - name: Run test
         run: npm test
