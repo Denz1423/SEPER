@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
-        mongodb-version: ['4.2']
+
         
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -35,13 +35,6 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-        
-      - name: Start MongoDB
-        uses: supercharge/mongodb-github-action@1.6.0
-        with:
-           mongodb-version: ${{ matrix.mongodb-version }}
-           mongodb-replica-set: test-rs
-           mongodb-port: 8080
            
       - name: Run server
         run: npm start
