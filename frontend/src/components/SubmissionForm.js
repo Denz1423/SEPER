@@ -7,8 +7,14 @@ const SubmissionForm = () => {
   const onSubmit = (data) => {
     const axios = require('axios');
     axios.post('/articles', JSON.stringify(data), {headers: {"Content-Type": "application/json"}}).then(function(response){
-      setResult("Submission success!");
+      // setResult("Submission success!");
+      refresh();
     });
+  }
+
+  function refresh() {
+    window.location.reload(false);
+    alert("Success!");
   }
 
   return (
