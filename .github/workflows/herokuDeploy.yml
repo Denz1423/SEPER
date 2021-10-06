@@ -42,11 +42,12 @@ jobs:
            mongodb-version: ${{ matrix.mongodb-version }}
            mongodb-replica-set: test-rs
            mongodb-port: 8080
+           
+      - name: Run server
+        run: npm start
 
       - name: Run test
         run: npm test
-        env:
-          CI: true
       
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
