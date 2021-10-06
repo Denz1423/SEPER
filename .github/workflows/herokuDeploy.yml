@@ -41,6 +41,10 @@ jobs:
         uses: supercharge/mongodb-github-action@1.6.0
         with:
           mongodb-version: ${{ matrix.mongodb-version }}
+        env:
+                MONGO_INITDB_ROOT_USERNAME: ${{secrets.MONGO_USERNAME}}
+                MONGO_INITDB_ROOT_PASSWORD: ${{secrets.MONGO_PASSWORD}}
+                MONGO_INITDB_DATABASE: Evidences
         
       - name: Run server
         run: npm start
