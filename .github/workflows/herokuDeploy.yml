@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on:
 
@@ -36,14 +36,13 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      - name: MongoDB in GitHub Actions
-       # You may pin to the exact commit or the version.
-       # uses: supercharge/mongodb-github-action@a16e87bbc3edc38021742a5f958831c905fe9f67
-        uses: supercharge/mongodb-github-action@1.6.0
+      - name: Setup mongodb with password
+        uses: getong/mongo-action@v1.1
         with:
-         # MongoDB version to use (default "latest")
-          mongodb-version: latest # optional, default is latest
-          mongodb-port: 27017 # optional, default is 27017
+          mongo version: latest
+          host port: 27017
+          mongo username: ${{secrets.MONGO_USERNAME}}
+          mongo password: ${{secrets.MONGO_PASSWORD}}
 
       - name: Run test
         run: npm test
