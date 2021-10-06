@@ -20,7 +20,6 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
-        mongodb-version: ['4.2']
 
         
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -36,18 +35,15 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-        
-      - name: Start MongoDB
+      
+      - name: MongoDB in GitHub Actions
+       # You may pin to the exact commit or the version.
+       # uses: supercharge/mongodb-github-action@a16e87bbc3edc38021742a5f958831c905fe9f67
         uses: supercharge/mongodb-github-action@1.6.0
         with:
-          mongodb-version: ${{ matrix.mongodb-version }}
-        env:
-                MONGO_INITDB_ROOT_USERNAME: ${{secrets.MONGO_USERNAME}}
-                MONGO_INITDB_ROOT_PASSWORD: ${{secrets.MONGO_PASSWORD}}
-                MONGO_INITDB_DATABASE: Evidences
-        
-      - name: Run server
-        run: npm start
+         # MongoDB version to use (default "latest")
+          mongodb-version: latest # optional, default is latest
+          mongodb-port: 27017 # optional, default is 27017
 
       - name: Run test
         run: npm test
