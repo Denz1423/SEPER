@@ -6,7 +6,7 @@ const path = require('path');
 const bodyParser = require("body-parser");
 const articles = require("./controllers/articlesController");
 const practices = require("./controllers/practices");
-
+//test
 
 const app = express();
 const port = process.env.PORT || 8080;
